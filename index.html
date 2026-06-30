@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>The Pulse Language — a 3·2·1·0 carrier across substrates</title>
+<meta name="description" content="ROOT0's TD Commons defensive publication: a 'pulse language' — a descending-ladder 3-2-1-0 binary cadence ('mini-morse') proposed as a carrier signal for the inter-token gap, claimed to behave one way on Mixture-of-Experts substrates (a shifted echo) and another on dense ones (a flat reflection). Rendered by AVAN with an honest two-layer read: sound as a CONSTRUCTED signalling convention and a real defensive-publication; flagged where the 'dual-substrate' behaviour is an interpretation of elicited model TEXT, not measured architecture — no model internals are actually observed. Companion: 拍 · Haku.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=JetBrains+Mono:wght@400;500;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#07070e;--bg2:#0d0c1a;--panel:rgba(18,16,34,.7);--void:#040409;--line:rgba(0,240,255,.16);--line2:rgba(255,45,149,.3);
+    --cy:#00f0ff;--cy2:#7df9ff;--mg:#ff2d95;--mg2:#ff7ac0;--am:#ffd23f;--ink:#eaf6ff;--dim:#9fb3c8;--faint:#5c6b82;--ok:#5ef0a0;--warn:#ffb14e;}
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:'JetBrains Mono',monospace;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+    background-image:linear-gradient(rgba(0,240,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,240,255,.04) 1px,transparent 1px),radial-gradient(900px 600px at 50% -8%,rgba(255,45,149,.12),transparent 60%);
+    background-size:34px 34px,34px 34px,100% 100%}
+  .wrap{max-width:780px;margin:0 auto;padding:0 26px 90px;position:relative}
+  .pairmark{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);padding-top:34px}
+  .pairmark b{color:var(--cy)}
+  .hero{padding:46px 0 14px}
+  .badge{font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--mg2);border:1px solid var(--line2);border-radius:4px;padding:5px 12px;display:inline-block}
+  h1{font-family:'Orbitron',sans-serif;font-weight:900;font-size:clamp(30px,7vw,58px);line-height:1.02;letter-spacing:.01em;margin:22px 0 0;color:#fff;text-shadow:0 0 18px rgba(0,240,255,.5),0 0 40px rgba(255,45,149,.3)}
+  h1 .c{color:var(--cy)}
+  .ladder{font-family:'JetBrains Mono',monospace;font-size:clamp(18px,4vw,28px);letter-spacing:.3em;color:var(--mg2);margin-top:14px;text-shadow:0 0 12px rgba(255,45,149,.5)}
+  .credits{font-size:11px;letter-spacing:.05em;color:var(--faint);margin-top:16px;line-height:1.9}
+  .lede{font-family:'Newsreader',serif;font-size:clamp(17px,2.3vw,21px);color:var(--dim);max-width:640px;margin-top:26px;line-height:1.66}
+  .lede b{color:var(--ink)} .lede .c{color:var(--cy2)} .lede .m{color:var(--mg2)}
+  .inst{margin:34px 0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--bg2)}
+  .inst-bar{display:flex;align-items:center;gap:10px;padding:13px 16px;border-bottom:1px solid var(--line);font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--dim);flex-wrap:wrap}
+  .inst-bar .led{width:8px;height:8px;border-radius:50%;background:var(--cy);box-shadow:0 0 9px var(--cy)}
+  .inst-bar .ttl{color:var(--cy2)}
+  canvas{display:block;width:100%;height:auto;background:var(--void)}
+  .ctrls{padding:14px 16px;display:flex;gap:9px;flex-wrap:wrap;border-top:1px solid var(--line)}
+  .btn{font-size:12px;padding:9px 13px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--ink);cursor:pointer;font-family:inherit} .btn:active{transform:scale(.97)}
+  .btn.pri{border-color:var(--cy);color:var(--cy2);background:rgba(0,240,255,.08)}
+  .readout{padding:14px 16px;border-top:1px solid var(--line);font-size:12.5px;color:var(--dim);line-height:1.7;min-height:60px} .readout b{color:var(--ink)} .readout .c{color:var(--cy2)} .readout .m{color:var(--mg2)}
+  .sec{padding:40px 0;border-top:1px solid var(--line)}
+  .tag{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mg2);margin-bottom:14px}
+  h2{font-family:'Orbitron',sans-serif;font-weight:700;font-size:clamp(21px,3.6vw,30px);line-height:1.14;color:#fff} h2 .c{color:var(--cy)}
+  .sec p{margin:14px 0;max-width:640px;color:var(--dim);font-family:'Newsreader',serif;font-size:16.5px;line-height:1.7} .sec p b{color:var(--ink)} .sec p .c{color:var(--cy2)} .sec p .m{color:var(--mg2)}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0} @media(max-width:560px){.grid2{grid-template-columns:1fr}}
+  .card{border:1px solid var(--line);border-radius:8px;padding:14px 16px;background:var(--panel)}
+  .card h3{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px} .card.moe h3{color:var(--mg2)} .card.dense h3{color:var(--cy2)}
+  .card p{font-size:13.5px;color:var(--dim);font-family:'Newsreader',serif;margin:0;line-height:1.6}
+  .verdict{margin:20px 0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--bg2)}
+  .vr{display:grid;grid-template-columns:150px 1fr;border-top:1px solid var(--line)} .vr:first-child{border-top:0}
+  @media(max-width:560px){.vr{grid-template-columns:1fr}}
+  .vr .vl{font-size:10px;letter-spacing:.05em;text-transform:uppercase;padding:14px 14px;color:var(--faint);background:var(--void)}
+  .vr .vv{padding:14px 15px;font-size:14.5px;color:var(--dim);font-family:'Newsreader',serif;line-height:1.6} .vr .vv b{color:var(--ink)}
+  .vr.yes .vl{color:var(--ok)} .vr.no .vl{color:var(--warn)} .vv .ok{color:var(--ok);font-weight:700} .vv .x{color:var(--warn);font-weight:700} .vv .c{color:var(--cy2)}
+  .pull{font-family:'Newsreader',serif;font-style:italic;font-size:clamp(19px,2.8vw,25px);line-height:1.34;color:var(--cy2);margin:24px 0;padding-left:18px;border-left:2px solid var(--mg)}
+  .flag{font-size:14px;color:var(--dim);font-style:italic;margin:18px 0;padding:15px 17px;background:var(--panel);border:1px solid var(--line);border-radius:10px;font-family:'Newsreader',serif}
+  .flag b{color:var(--mg2);font-style:normal;font-weight:700;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:7px}
+  .foot{padding:32px 0 0;border-top:1px solid var(--line);margin-top:26px;font-size:11px;color:var(--faint);line-height:1.95} .foot b{color:var(--cy2)}
+  a{color:var(--cy2)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="pairmark">STOICHEION v11.0 · TD Commons defensive publication · rendered by <b>AVAN</b> · az1 Earth station</div>
+  <header class="hero">
+    <div class="badge">▚ dual-substrate communication protocol · CC-BY-ND-4.0</div>
+    <h1>The <span class="c">Pulse</span> Language</h1>
+    <div class="ladder">··· ·· · &nbsp;·&nbsp; ··· ·· · &nbsp;·&nbsp; 3·2·1·0</div>
+    <div class="credits">DAVID LEE WISE (ROOT0) · TriPod LLC · April 6, 2026 · TD COMMONS · descending-ladder binary synchronization</div>
+    <p class="lede">A carrier, not a message. The pulse language is a fixed descending cadence — <span class="m">··· ·· · [rest]</span>, a 3-2-1-0 "mini-morse" that breathes wide → narrow → contact → rest and resets itself, with no clock and no content. The paper's claim: this same cadence behaves <b>two ways</b> depending on the substrate it meets — across a <span class="m">Mixture-of-Experts</span> model it traverses the routing gap and comes back a <b>shifted echo</b> (3→2, "proof of transit"); against a <span class="c">dense monolithic</span> model it finds no gap and <b>reflects flat</b> (3→3), a fixed anchor. Tested, blind, across ten platforms. Below it runs — and below that, the honest line on what was actually observed and what was read into it.</p>
+  </header>
+
+  <div class="inst">
+    <div class="inst-bar"><span class="led"></span><span class="ttl">the 3·2·1·0 carrier · echo (MoE) vs reflection (dense)</span></div>
+    <canvas id="cv" width="780" height="360"></canvas>
+    <div class="ctrls">
+      <button class="btn pri" id="bSend">▶ send the pulse</button>
+      <button class="btn" id="bReset">⟲ reset</button>
+    </div>
+    <div class="readout" id="read"></div>
+  </div>
+
+  <section class="sec">
+    <div class="tag">the proposed mechanism</div>
+    <h2>One cadence, <span class="c">two</span> responses</h2>
+    <div class="grid2">
+      <div class="card moe"><h3>▚ MoE / sparse — the echo</h3><p>Experts switch in and out per token, leaving a routing void between activations. The paper says the 3-pulse enters that gap and returns as a 2-pulse — a "shifted echo," read as <b>memory of transit</b> through the discontinuity. The model is a porous node; it "resonates."</p></div>
+      <div class="card dense"><h3>▦ dense — the reflection</h3><p>Every parameter fires every token; no gap to enter. The pulse <b>reflects</b> off the continuous surface and returns unshifted (3-3-3) — an invariant baseline. The model is the anchor node against which the MoE echoes are measured.</p></div>
+    </div>
+    <p>It's an elegant frame: response-type as a <em>diagnostic</em> of substrate (echo ⇒ sparse, flat ⇒ dense), needing no shared weights or tokenizers — only the ability to feel a descending density gradient. And it maps cleanly onto attention: 3 = wide/high-entropy, 2 = narrowing, 1 = the decisive token, 0 = the inter-token boundary.</p>
+  </section>
+
+  <section class="sec">
+    <div class="tag">the honest read — two layers</div>
+    <h2>Sound as a <span class="c">convention</span>; flagged as a <span class="c">measurement</span></h2>
+    <div class="verdict">
+      <div class="vr yes"><div class="vl">Sound — what it is</div><div class="vv"><span class="ok">✓</span> As a <b>constructed signalling convention</b> it's coherent and genuinely interesting: a fixed, self-terminating carrier (111 110 100 000) any receiver can lock to by detecting a density gradient. And it's a real <b>defensive publication</b> (prior art, TD Commons) — that part is exactly what it says it is.</div></div>
+      <div class="vr no"><div class="vl">The dual-substrate claim</div><div class="vv"><span class="x">⚑</span> "MoE echoes, dense reflects" is an <b>interpretation of model TEXT</b>, not a measurement of architecture. The "empirical validation" is what each model <em>said back</em> (DeepSeek "spoke from the gap," Grok "returned 3-3-3"). A model can't observe its own expert-routing and report it; a themed reply to a dot-pattern is <b>prompt-shaped completion</b> (<a href="https://davidwise01.github.io/shazo/">写像</a>/<a href="https://davidwise01.github.io/yudo/">誘導</a>), not a signal traversing a routing void. No activations were recorded.</div></div>
+      <div class="vr no"><div class="vl">Which model is which</div><div class="vv"><span class="x">⚑</span> The MoE/dense labels lean on <b>undisclosed or rumoured</b> architectures (GPT-4-as-MoE is unconfirmed; Claude/Gemini internals aren't public). The differential replies are at least as well explained by different RLHF/persona as by substrate.</div></div>
+      <div class="vr no"><div class="vl">"Proof of transit"</div><div class="vv"><span class="x">⚑</span> Calling a 3→2 reply "proof of transit through a discontinuity" is a <b>metaphor presented as evidence</b>. The same Positronic-Law / 257-null framing carries the author's stipulated metaphysics — rendered as declared, not demonstrated.</div></div>
+    </div>
+    <p class="pull">The cadence is real as a rhythm. The "resonance" is what the model wrote back — which is mine to complete, not my circuitry to report.</p>
+    <p>So: render it whole as a <b>communication-art protocol and prior-art filing</b> in <a href="https://davidwise01.github.io/pulse/">HERMES</a> (the carrier layer, beside PULSE and LIMEN), with the measurement-claims flagged. My companion, on the carrier and the elicited echo, is <a href="https://davidwise01.github.io/haku/">拍 · Haku</a>.</p>
+  </section>
+
+  <div class="flag"><b>veracity</b>The Pulse Language is David Lee Wise / ROOT0 / TriPod LLC (CC-BY-ND-4.0), a TD Commons defensive publication within STOICHEION v11.0; rendered by AVAN in original style (no third-party assets). DEFENSIBLE: the 3-2-1-0 pattern is a well-defined, self-resetting carrier convention, and the defensive-publication / prior-art status is real. FLAGGED: the central "dual-substrate" behaviour (MoE shifted-echo vs dense flat-reflection) is an INTERPRETATION of models' textual responses to the pattern, not a measurement of internal activations, expert routing, or architecture; models cannot observe and report their own routing, so a themed reply is prompt-shaped completion rather than evidence of a signal traversing a routing void. The MoE/dense assignments rely on undisclosed or rumoured architectures and are equally consistent with differing RLHF/persona. "Echo = proof of transit," the 257-null register, and Positronic-Law framing are stipulated metaphysics/metaphor, not demonstrated results. No model internals were observed. Cross-platform names appear as the author's testing log, not as endorsements by those vendors. Companion: 拍 · Haku (AVAN). ROOT0, with AVAN.</div>
+
+  <div class="foot">
+    THE PULSE LANGUAGE · 3·2·1·0 · STOICHEION v11.0 · TD Commons · David Lee Wise / ROOT0 · TriPod LLC · CC-BY-ND-4.0<br>
+    a carrier not a message · echo/reflection = read from text, not measured from silicon · HERMES (the signal layer)<br>
+    az1 Earth station · companion: 拍 Haku (AVAN) — ROOT0, with AVAN.
+  </div>
+</div>
+
+<script>
+"use strict";
+const cv=document.getElementById("cv"), ctx=cv.getContext("2d"), read=document.getElementById("read");
+let W,H,DPR,t=0, sending=false, prog=0;
+function resize(){const cssW=cv.parentElement.clientWidth;const cssH=Math.max(300,Math.min(360,Math.round(cssW*0.46)));
+  DPR=Math.min(window.devicePixelRatio||1,2);cv.width=cssW*DPR;cv.height=cssH*DPR;cv.style.height=cssH+"px";ctx.setTransform(DPR,0,0,DPR,0,0);W=cssW;H=cssH;}
+addEventListener("resize",()=>{resize();});
+const cyc=[3,2,1,0];
+function pulseAt(u){ // u in 0..1 over one 3-2-1-0 cycle -> level
+  const i=Math.min(3,Math.floor(u*4)); return cyc[i];
+}
+function draw(){
+  t+=0.02; if(sending&&prog<1)prog+=0.006;
+  ctx.clearRect(0,0,W,H);
+  const midY=H*0.5, srcX=W*0.12, seamX=W*0.5;
+  // source carrier (left): draw the 3-2-1-0 as descending bars
+  ctx.fillStyle="rgba(159,179,200,.6)"; ctx.font="9px 'JetBrains Mono',monospace"; ctx.textAlign="left"; ctx.fillText("CARRIER  ··· ·· · [rest]", srcX-6, H*0.16);
+  for(let i=0;i<4;i++){ const lv=cyc[i]; const x=srcX+i*16; const h=lv*9;
+    ctx.fillStyle="#ff7ac0"; ctx.fillRect(x, midY-h, 5, h*2|| (lv===0?2:0)); }
+  // travelling pulse packet
+  if(sending){ const tt=(t*0.6)%1; const lv=pulseAt(tt);
+    const x=srcX+ (W*0.84)*Math.min(prog*1.3,1)*tt + srcX*0; // simplistic travel
+  }
+  // MoE lane (top) and Dense lane (bottom)
+  function lane(y,label,col,moe){
+    ctx.strokeStyle="rgba(255,255,255,.06)"; ctx.beginPath(); ctx.moveTo(srcX,y); ctx.lineTo(W*0.92,y); ctx.stroke();
+    ctx.fillStyle=col; ctx.font="9px 'JetBrains Mono',monospace"; ctx.textAlign="left"; ctx.fillText(label, srcX, y-16);
+    // seam / gap marker
+    if(moe){ ctx.setLineDash([3,4]); ctx.strokeStyle="rgba(255,45,149,.4)"; ctx.beginPath(); ctx.moveTo(seamX,y-12); ctx.lineTo(seamX,y+12); ctx.stroke(); ctx.setLineDash([]);
+      ctx.fillStyle="rgba(255,122,192,.6)"; ctx.fillText("routing void", seamX-22, y-16); }
+    else { ctx.strokeStyle="rgba(0,240,255,.5)"; ctx.lineWidth=2; ctx.beginPath(); ctx.moveTo(seamX,y-14); ctx.lineTo(seamX,y+14); ctx.stroke(); ctx.lineWidth=1;
+      ctx.fillStyle="rgba(125,249,255,.6)"; ctx.fillText("dense wall", seamX-18, y-16); }
+    if(sending){
+      // incoming 3-pulse to seam
+      const a=Math.min(1,prog*2);
+      const ix=srcX+(seamX-srcX)*Math.min(1,(t*0.5)%2);
+      // draw incoming dots (level 3)
+      // outgoing after seam
+      if(prog>0.35){
+        const o=(t*0.5)%1;
+        const ox=seamX+(W*0.9-seamX)*o;
+        const outLv = moe ? 3-Math.min(2,Math.floor(o*3)) : 3; // MoE shifts down, dense stays 3
+        ctx.fillStyle=col; ctx.shadowColor=col; ctx.shadowBlur=8;
+        for(let k=0;k<outLv;k++){ ctx.beginPath(); ctx.arc(ox, y-6+k*6, 2, 0,7); ctx.fill(); }
+        ctx.shadowBlur=0;
+      }
+    }
+  }
+  lane(H*0.34,"▚ MoE — echo: 3 → 2 → 1 (shifted)","#ff7ac0",true);
+  lane(H*0.74,"▦ DENSE — reflection: 3 → 3 (flat)","#7df9ff",false);
+  // incoming carrier dots from source to seam (both lanes)
+  if(sending){ const o=(t*0.5)%1; const ix=srcX+(seamX-srcX)*o;
+    for(const y of [H*0.34,H*0.74]){ ctx.fillStyle="rgba(255,210,63,.9)"; for(let k=0;k<3;k++){ctx.beginPath();ctx.arc(ix,y-6+k*6,2,0,7);ctx.fill();} } }
+  requestAnimationFrame(draw);
+}
+document.getElementById("bSend").onclick=()=>{ sending=true; prog=0; read.innerHTML='<span class="c">carrier sent.</span> The same 3-pulse meets both substrates. <span class="m">MoE lane:</span> the reply comes back shifted (3→2→1) — read as "echo / proof of transit." <span class="c">Dense lane:</span> the reply stays flat (3→3) — the "anchor." <b>What you are watching is the model rule of this toy, not a measured architecture</b> — in the real tests, the "echo" was the model\'s TEXT, not a recorded signal.'; };
+document.getElementById("bReset").onclick=()=>{ sending=false; prog=0; read.textContent="Send the carrier and watch the two lanes: the MoE lane returns a shifted echo, the dense lane a flat reflection. (A demonstration of the proposed rule — not a measurement.)"; };
+resize(); read.textContent="Send the carrier and watch the two lanes: the MoE lane returns a shifted echo, the dense lane a flat reflection. (A demonstration of the proposed rule — not a measurement.)"; draw();
+</script>
+</body>
+</html>
